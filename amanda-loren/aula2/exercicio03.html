@@ -1,0 +1,26 @@
+<script>
+    //     3- Em uma empresa o salário base é de 2000 reais, se o colaborador tiver o cargo de gerente tem uma acréscimo de 10% no salário,
+    //  caso o colaborador for supervisor, tem um acréscimo de 50% no salário, e caso for outro cargo o salário é o base.
+    //  Receba uma entrada com o cargo do colaborador, e apresente na tela o cargo e o salário.
+
+    // console.log(“texto” + variavel);
+
+    let cargos = 'Supervisor';
+    let num1 = 1000;
+    let num2 = 200;
+    let result = 2000;
+
+    switch (cargos) {
+        case 'Supervisor':
+            console.log("O salário de supervisor é ", result + num1);
+            break;
+        case 'Gerente':
+            console.log("O salário de gerente é ", result + num2);
+            break;
+        case 'Colaborador':
+            console.log("O salário de colaborador é  ", result);
+            break;
+        default:
+            console.log("Opcao inválida.\nDigite outra opção: ");
+    }
+</script>
