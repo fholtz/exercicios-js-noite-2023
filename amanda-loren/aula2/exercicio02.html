@@ -1,0 +1,30 @@
+<script>
+    // 2- Desenvolva uma calculadora com as 4 operações básicas (soma, subtração, divisão e multiplicação). 
+    // Receba 2 valores e qual operação a ser realizada, e apresente o cálculo e qual operação na tela
+
+    // console.log(“texto” + variavel);
+
+    let calculadora = 'Multiplicacao';
+    let num1 = 10;
+    let num2 = 35;
+    let result = 0;
+
+    switch (calculadora) {
+        case 'Soma':
+            result = num1 + num2;
+            console.log("A soma eh: " + result );
+            break;
+        case 'Subtracao':
+            console.log("Subtracao: %d\n", num1 - num2);
+            break;
+        case 'Multiplicacao':
+            console.log("Multiplicacao: %d\n", num1 * num2);
+            break;
+        case 'Divisao':
+            console.log("Divisão: %d\n", num1 / num2);
+            break;
+        default:
+            console.log("Opcao inválida.\nDigite outra opção: ");
+    }
+
+</script>

@@ -1,0 +1,38 @@
+<script>
+    // //     5- Compras, crie um script com a seguinte situação. Uma variável com valor total da compra. tipos de pagamentos 
+    // (pix, débito, crédito, parcelado no cartão, parcelado no carnê). 
+    // Se for pix, aplica-se um desconto de 10%; se for no débito, valor original; se for crédito em 1x, acréscimo de 5%; se for parcelado no cartão,
+    // acréscimo de 10% por parcela; se for parcelado no carnê, acréscimo de 20% por parcela;
+
+    // se a compra for feita em cartão, tanto em crédito ou em débito, 
+    // verificar se tem o valor disponível no cartão;
+    // o valor do cartão será dada por uma variável
+    // variaveis: formaPagamento; valorTotal; 
+    // aparecer a forma de pagamento, em quantas vezes foi escolhido, 
+    // se for parcelado aparecer o valor total e valor de cada parcela.
+
+    let valor = 100
+    let tipoPagamento = pix
+    let parcela = 5
+
+    switch (tipoPagamento) {
+        case 'pix':
+            console.log("Pix tem desconto de 10% ", valor - 10);
+            break;
+        case 'debito':
+            console.log("Débito ", valor);
+            break;
+        case 'credito1x':
+            console.log("Crédito á vista, possui acréscimo de 5%  ", valor + 5);
+            break;
+        case 'creditoparcelas':
+            console.log("Crédito parcelado, possui acréscimo de 10% por parcela ", valor / parcela + 10);
+            break;
+        case 'carne':
+            console.log("Carnê parcelado, possui acréscimo de 20% por parcela  ", valor / parcela + 20);
+            break;
+        default:
+            console.log("Opcao inválida.\nDigite outra opção: ");
+    }
+
+</script>
