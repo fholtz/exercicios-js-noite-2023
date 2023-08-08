@@ -1,0 +1,43 @@
+<script>
+    //01 - Escrever um algoritmo que leia 10 números e conte quantos deles estão nos 
+    //seguintes intervalos: [0-25], [26-50], [51-75] e [76-100]. mostre na tela a quantidade de vezes que aparece cada intervalo.
+
+    let array = [4, 51, 14, 25, 29, 33, 58, 67, 77, 10]
+
+    let cont1 = 0;
+    let cont2 = 0;
+    let cont3 = 0;
+    let cont4 = 0;
+    let soma1 = 0;
+    let soma2 = 0;
+    let soma3 = 0;
+    let soma4 = 0;
+
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] <= 25) {
+            cont1++;
+            soma1 += array[i];
+        }
+        else if (array[i] <= 50) {
+            cont2++;
+            soma2 += array[i];
+        }
+        else if (array[i] <= 75) {
+            cont3++;
+            soma3 += array[i];
+        }
+        else if (array[i] <= 100) {
+            cont4++;
+            soma4 += array[i];
+        }
+    }
+    console.log(cont1)
+    console.log(soma1)
+    console.log(cont2)
+    console.log(soma2)
+    console.log(cont3)
+    console.log(soma3)
+    console.log(cont4)
+    console.log(soma4)
+
+</script>
