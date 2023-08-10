@@ -1,0 +1,27 @@
+<script>
+    // 05 - Escreva um script que leia 15 números positivos, encontre o maior deles e o menor deles, e mostre na tela. 
+    // Faça isso na mão, não invoque nenhum método de sorting. 
+    // Dica pesquisa sobre bubble sort.
+
+    let array = [8, 2, 1, 6, 4, 3, 5, 9, 7, 12, 11, 15, 13, 14];
+
+
+    function bubbleSort() {
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] > array[i + 1]) {
+                let menor = array[i];
+                let maior = array[i + 1];
+                array[i] = maior
+                array[i + 1] = menor
+            }
+        }
+    }
+
+    for (let j = 0; j < array.length; j++) {
+        bubbleSort();
+
+    }
+
+    console.log(array[0]);
+    console.log(array[array.length-1]);
+</script>
