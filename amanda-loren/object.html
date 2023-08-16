@@ -1,0 +1,31 @@
+<script>
+    let carro = {
+        marca: "Fiat",
+        modelo: "Uno",
+        cor: "Branco",
+
+        ligado: false,
+
+        ligar: function () {
+            console.log("Carro Ligado!");
+            this.ligado = true;
+        },
+
+        desligar: function () {
+            console.log("Carro desligado!");
+            this.ligado = false;
+        },
+
+        acelerar: function () {
+            if (this.ligado == true ) {
+                console.log("Vum Vrum...");
+            } else {
+                console.log("Ligue o carro!");
+            }
+        }
+    }
+
+
+
+
+</script>
