@@ -114,7 +114,7 @@ Vai aparecer: 3,2,1
 
 __________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
-Exercícios dia 10-08-2023
+Exercícios dia 10-08-2023 e 15-08-2023
 
 01 - Temos um vetor de 5 posições, com o nome de 5 itens que nosso herói carrega na mochila. Quando o personagem chega numa porta, queremos detectar automaticamente se ele tem ou não uma chave para deixá-lo passar. Verifique percorrendo o vetor, comparando se cada item tem o nome “chave” e retorne verdadeiro se encontrar alguma. Caso contrário, a função deve retornar falso. Dependendo do retorno deverá mostrar uma resposta na tela.
 
@@ -125,3 +125,65 @@ Faça um script que simule uma urna eletrônica. Temos 7 eleitores, cada eleitor
 03 - Imagine o seguinte cenário: Marcelo lhe deve um dinheiro e promete pagar em parcelas mensais de R$ 70.
 Com o intuito de prever qual seria o valor devedor após o decorrer de 12 meses, você resolve escrever algumas linhas de código.
 Levando em consideração que o valor devido por Marcelo era de R$ 1400, qual seria o total devido após 12 meses?
+
+
+__________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+Desafio dia 17-08-2023
+
+Desafio array
+
+    Cada unidade tem uma receita base. Essa receita base será nosso comparativo para o caixa atual.
+    Cada unidade tem "x" pastas; Precisa bater 20 pastas. [array]
+
+    Se bater 20 pastas, contabiliza tanto pra positivo, quanto pra negativo o valor do caixa.
+    Se não bater 20 pastas, valor positivo não contabiliza, apenas valor negativo contabiliza.
+
+    A diferença entre o valor total de caixa atual com o valor total da base MAIS o valor do gerente, precisar ser maior que 20 mil.
+
+    Se chegar a 20 mil positivo, recebe 800 de meritocracia.
+    A cada 20 mil, ganha 800 reais.
+    Menos de 20 mil não recebe meritocracia.
+
+    Acima de 20 mil, caso não fechar outra merito(exemplo 40 mil), recebe proporcional.
+
+    Mostrar o valor entre a soma do valor total da base e o valor total atual do caixa.
+    Mostrar o valor total da meritocracia à receber (caso tenha batido).
+    Mostrar o valor total do gerente, caso não tenha batido a meritocracia.
+
+        baseGerente = 0;
+        minimoMerito = 20000;
+
+        let baseUnidade = [
+            132091.35,
+            107262.59,
+            24422.35,
+            28889.29,
+            148347.45,
+            64635.84,
+            30421.26,
+            15000,
+            22585.53
+        ];
+        let caixaAtual = [
+            139204.36,
+            99152.61,
+            27806.93,
+            35363.27,
+            173191.01,
+            61822.37,
+            28306.43,
+            46928.11,
+            18644.67
+        ];
+        let pastasUnidades = [
+            87,
+            24,
+            47,
+            20,
+            35,
+            15,
+            42,
+            29,
+            29
+        ];
