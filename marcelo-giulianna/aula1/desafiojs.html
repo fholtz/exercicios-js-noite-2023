@@ -1,0 +1,45 @@
+<script>
+
+    let pastas = [87, 24, 47, 20, 35, 15, 42, 29, 29];
+
+    let base = [132091.35, 107262.59, 24422.35, 28889.29, 148347.45, 64635.84, 30421.26, 15000, 22585.53];
+
+    let caixa = [139204.36, 99152.61, 27806.93, 35363.27, 173191.01, 61822.37, 28306.43, 46928.11, 18644.67];
+
+    let baseGerente = 0;
+    let minimoMerito = 20000;
+    let resultcaixa = 0
+    let resultbase = 0
+    let result = 0
+
+
+    for (let index = 0; index < caixa.length; index++) {
+        resultcaixa += caixa[index]
+        resultbase += base[index]
+        pastas[index]
+
+        if (pastas >= 20) {
+            result = resultcaixa - resultbase;
+
+        }
+
+    }
+    console.log("A soma total é ", resultcaixa);
+    console.log("A soma total é ", pastas);
+    console.log("A soma total é ", resultbase);
+    console.log("A soma total é ", result);
+
+    // for (let index = 0; index < base.length; index++) {
+    //     resultbase += base[index]
+    // }
+    // console.log("A soma total é ", resultbase);
+
+
+
+
+
+
+
+
+
+</script>
