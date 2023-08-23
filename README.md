@@ -129,7 +129,7 @@ Levando em consideração que o valor devido por Marcelo era de R$ 1400, qual se
 
 __________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
-Desafio dia 17-08-2023
+Desafio dia 17-08-2023 e 22-08-2023
 
 Desafio array
 
@@ -187,3 +187,24 @@ Desafio array
             29,
             29
         ];
+
+__________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+Exercícios dia 24-08-2023
+
+01- Escreva uma função que realize uma soma e mostre o resultado no console.log.
+
+02- Escreva uma função calculadora que na sua chamada receba uma das operações básicas e dois valores para o cálculo, apresente no console.log a operação escolhida e o resultado.
+
+03- Escreva uma função que, de acordo com a opção escolhida, mostrará as opções para o usuário. As opções serão:
+
+		        Gênero 		Classificação Indicativa
+		        Ação 		14
+		        Romance 	10
+		        Comédia 	8
+		        Animação 	Livre
+		        Suspense 	16
+		        Terror 		18
+
+
+Após ter sido escolhido a opção, terá que verificar a classificação indicativa do filme. Se o usuário tiver o mínimo de idade para a classificação do genêro do filme, retorne no console "Bom Filme"; Caso a idade do usuário não ter o mínimo da classificação do genêro do filme, retorne no console "Esse título não é para sua Idade", e mostre os Gêneros que a idade > do usuário pode assistir.
