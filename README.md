@@ -208,3 +208,13 @@ Exercícios dia 24-08-2023
 
 
 Após ter sido escolhido a opção, terá que verificar a classificação indicativa do filme. Se o usuário tiver o mínimo de idade para a classificação do genêro do filme, retorne no console "Bom Filme"; Caso a idade do usuário não ter o mínimo da classificação do genêro do filme, retorne no console "Esse título não é para sua Idade", e mostre os Gêneros que a idade > do usuário pode assistir.
+
+
+__________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+Exercícios dia 29-08-2023
+
+01- Crie um formulário em html com o que você aprendeu na aula de HTML, porém utilize o framework Bootstrap para criação do layout, envie as informações para o mesmo arquivo de criação do layout e utilize o method get. Lembrando que o button deve ser do tipo submit.
+
+02- Crie um layout com alguns componentes do bootstrap a sua escolha, utilize pelo menos 5 componente do bootstrap.
+
