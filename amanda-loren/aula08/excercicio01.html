@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 1 - Em uma página HTML, utilizando input, insira uma idade e verifique de forma dinâmica se é menor ou maior de idade,
+    se a idade for maior ou igual a 18 anos, deixe o background da tela com a cor black e com o texto informando que a idade
+    é maior de idade com a cor silver, se for menor de idade, deixar o background vermelho com as fonts na cor white. -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1>Informe sua Idade</h1>
+    <label>Idade:</label>
+    <input type="number" id="num">
+    <button onclick="idadepessoa()">Confirmar</button>
+    <h1 id="texto"></h1>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+
+<script>
+    function idadepessoa() {
+        let x = document.body;
+        let num = Number(document.getElementById('num').value);
+
+        if (num >= 18) {
+            x.style.background = "black";
+            x.style.color = "silver";
+            document.getElementById('texto').innerHTML = "É maior de idade";
+        } else {
+            document.getElementById('texto').innerHTML = "É menor de idade";
+            x.style.background = "red";
+            x.style.color = "white";
+        }
+    }
+</script>
+
+</html>
