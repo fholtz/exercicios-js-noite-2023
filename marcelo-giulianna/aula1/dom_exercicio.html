@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1>Idade</h1>
+    <label for="">Número</label>
+    <input type="number" placeholder="numero" id="num">
+    <button id="numero" type="button" class="btn btn-primary" onclick="enviar()">enviar</button>
+
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+    </script>
+
+<script>
+    function enviar() {
+        let numero = Number(document.getElementById('num').value);  
+        if (numero % 3 == 0) {
+            document.getElementById('numero').classList.replace('btn-primary', 'btn-success')
+            document.getElementById('numero').innerHTML = 'O número é divisivel por 3'
+        }
+        else if (numero % 3 != 0) {
+            document.getElementById('numero').classList.replace('btn-primary', 'btn-danger')
+            document.getElementById('numero').innerHTML = 'O número não é divisivel por 3'
+        }
+    }
+
+</script>
+
+</html>
