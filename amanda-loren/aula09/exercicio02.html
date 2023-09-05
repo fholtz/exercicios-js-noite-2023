@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Média do Aluno</h1>
+    <label>Número:</label>
+    <input type="number1" id="num1">
+    <input type="number2" id="num2">
+    <input type="number3" id="num3">
+    <button id="btn-divisivel" class="btn btn-primary" onclick="divisivel()">Calcular</button>
+    <h1 id="texto"></h1>
+</body>
+<script>
+    let operacao = "";
+
+    function calculadora() {
+        let result = 0
+        switch (operacao) {
+            case 'Soma':
+                result = num1 + num2 + num3;
+                break;
+            case 'Divisao':
+                console.log("Divisão: %d\n", result / 3);
+                document.getElementById('texto').innerHTML = "Aprovado";
+                break;
+            // default:
+            //     console.log("Opcao inválida.\nDigite outra opção: ");
+        }
+    }
+
+    let calc = calculadora(operacao, num1, num2);
+
+não terminamos
+</script>
+</html>
