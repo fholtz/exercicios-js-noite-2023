@@ -1,0 +1,66 @@
+<!-- 02 - Faça um script de uma calculadora IMC, com input de adicionar altura, outro de adicionar o peso, o botão calcular IMC,
+    //  e mostrar o resultado na tela.
+
+    // Calcular IMC IMC = peso / (altura * altura) 
+    // menor que 18.5 - abaixo do peso normal
+    // 18.5 - 24.9 - peso normal 
+    // 25 - 29.9 - excesso de peso 
+    // 30 - 34.9 - obesidade classe I
+    // 35 - 39.9 - obesidade classe II 
+    // maior ou igual a 40 - obesidade classe III -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="mb-3">
+        <label for="exampleInput" class="form-label">CALCULE O SEU IMC</label>
+        <input type="number" class="form-control" id="peso" placeholder="Peso">
+        <input type="number" class="form-control" id="altura" placeholder="Altura">
+    </div>
+
+    <button class="btn btn-primary" onclick="calcular()">Calcular</button>
+    <h5 id="texto"></h5>
+</body>
+
+<script>
+    function calcular() {
+
+        let peso = document.getElementById("peso").value;
+        let altura = document.getElementById("altura").value;
+        let imc = 0
+        imc = parseFloat(peso) / (parseFloat(altura) * parseFloat(altura))
+        //let resultado = "";
+
+        if (imc < 17) {
+            document.getElementById('texto').innerHTML = "Muito abaixo do peso " + imc;
+            //resultado = "Muito abaixo do peso " + imc;
+        } if (imc >= 17 && imc < 18.50) {
+            document.getElementById('texto').innerHTML = "Abaixo do peso" + imc;
+        } if (imc >= 18.50 && imc < 25) {
+            document.getElementById('texto').innerHTML = "Peso normal " + imc;
+        } if (imc >= 25 && imc < 30) {
+            document.getElementById('texto').innerHTML = "Acima do peso " + imc;
+        } if (imc >= 30 && imc < 35) {
+            document.getElementById('texto').innerHTML = "Obesidade grau I " + imc;
+        } if (imc >= 35 && imc < 40) {
+            document.getElementById('texto').innerHTML = "Obesidade grau II " + imc;
+        } if (imc >= 40) {
+            document.getElementById('texto').innerHTML = "Obesidade grau III " + imc;
+        }
+
+        //document.getElementById('texto').innerHTML = resultado;
+    }
+    
+</script>
+<script src = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+integrity = "sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin = "anonymous"></script>
+</html>

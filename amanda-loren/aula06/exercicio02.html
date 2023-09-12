@@ -1,0 +1,32 @@
+<script>
+    // 02- Escreva uma função calculadora que na sua chamada receba uma das operações básicas e dois valores para o cálculo,
+    // apresente no console.log a operação escolhida e o resultado.
+
+    let num1 = 10;
+    let num2 = 35;
+    let operacao = "Soma";
+
+    function calculadora(operacao, num1, num2) {
+        let result = 0
+        switch (operacao) {
+            case 'Soma':
+                result = num1 + num2;
+                console.log("A soma eh: " + result);
+                break;
+            case 'Subtracao':
+                console.log("Subtracao: %d\n", num1 - num2);
+                break;
+            case 'Multiplicacao':
+                console.log("Multiplicacao: %d\n", num1 * num2);
+                break;
+            case 'Divisao':
+                console.log("Divisão: %d\n", num1 / num2);
+                break;
+            default:
+                console.log("Opcao inválida.\nDigite outra opção: ");
+        }
+    }
+
+    let calc = calculadora(operacao, num1, num2);
+
+</script>
