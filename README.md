@@ -240,3 +240,13 @@ Exercícios dia 31-08-2023
 
 Após ter sido escolhido a opção, terá que verificar a classificação indicativa do filme. Se o usuário tiver o mínimo de idade para a classificação do gênero do filme, retorne na tela "Bom Filme"; Caso a idade do usuário não ter o mínimo da classificação do gênero do filme, retorne na tela "Esse título não é para sua Idade", e mostre os Gêneros que a idade > do usuário pode assistir.
 
+__________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+Exercícios dia 05-09-2023
+
+01 - Faça um script que verifique se um número inteiro é divisível por 3, o botão que realiza a ação terá cor azul inicialmente. Se o número é divisível por 3, alterar a cor do botão para verde, senão, alterar para vermelho. Mostrar na tela a mensagem se é divisível ou não.
+
+02 - Faça um programa com layout (bootstrap ou html e css) aonde o usuário informa 3 notas de um aluno. Em seguida calcule a média do aluno e dar o seguinte resultado: A mensagem "Aprovado" com o fundo na cor amarela e a fonte na cor preta, se a média alcançada for maior ou igual a sete; A mensagem "Reprovado" com o fundo vermelho e a fonte branca, se a média for menor do que sete; A mensagem "Aprovado com Distinção" com o fundo verde e a fonte branca, se a média for igual a dez.
+
+
+
