@@ -249,4 +249,24 @@ Exercícios dia 05-09-2023
 02 - Faça um programa com layout (bootstrap ou html e css) aonde o usuário informa 3 notas de um aluno. Em seguida calcule a média do aluno e dar o seguinte resultado: A mensagem "Aprovado" com o fundo na cor amarela e a fonte na cor preta, se a média alcançada for maior ou igual a sete; A mensagem "Reprovado" com o fundo vermelho e a fonte branca, se a média for menor do que sete; A mensagem "Aprovado com Distinção" com o fundo verde e a fonte branca, se a média for igual a dez.
 
 
+__________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
+Exercícios dia 12-09-2023
+
+01 - Criar um input, para incluir números a um array, e fazer a ordenação dinamicamente a cada nova inserção de um número. Mostrar na tela os números ordenados (toda vez que adicionar um novo número)
+
+
+02 - Faça um script de uma calculadora IMC, com input de adicionar altura, outro de adicionar o peso, o botão calcular IMC, e mostrar o resultado na tela.
+
+Calcular IMC
+    IMC = peso / (altura * altura)
+    menor que 18.5 - abaixo do peso normal
+    18.5 - 24.9 - peso normal
+    25 - 29.9 - excesso de peso
+    30 - 34.9 - obesidade classe I
+    35 - 39.9 - obesidade classe II
+    maior ou igual a 40 - obesidade classe III
+
+03 - Faça um conversor de temperatura (o usuário pode escolher de Celsius para Fahrenheit, ou vice-versa): deverá ter um input para o valor, input tipo radio para escolher para qual escala de temperatura irá converter, e o botão, além de mostrar o resultado na tela. "A temperatura em graus X é 0000"
+
+04 - Adicione vários números em uma única string, separados com vírgula, em algum evento do JS transforme a string em um array, apresenta o array na tela, e também a soma de todos os valores em suas posições.
