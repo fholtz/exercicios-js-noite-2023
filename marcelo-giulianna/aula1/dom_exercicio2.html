@@ -18,29 +18,34 @@
         <input type="number" placeholder="nota2" id="nota2">
         <input type="number" placeholder="nota3" id="nota3">
         <div class="bg-transparent text-body" id='notas'>
-            <button id="botao" type="button" onclick="enviar()">Calcular média</button>
+            <button class="btn btn-light" id="botao" type="button" onclick="enviar()">Calcular média</button>
         </div>
 
     </body>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
-    </script>
+    </script> -->
 
 <script>
     function enviar() {
-        let nota1 = Number(document.getElementById('nota1').value);
-        let nota2 = Number(document.getElementById('nota2').value);
-        let nota3 = Number(document.getElementById('nota3').value);
+        let nota1 = Number(document.getElementById("nota1").value);
+        let nota2 = Number(document.getElementById("nota2").value);
+        let nota3 = Number(document.getElementById("nota3").value);
         let media = (nota1 + nota2 + nota3) / 3;
 
-        if (media >= 7) {
-            document.getElementById('notas').classList.replace("bg-transparent text-body", "bg-warning text-dark")
-            document.getElementById('notas').innerHTML('Aprovado')
+        if (media >= 7 && media <= 9.9) {
+            document.getElementById("botao").classList.replace("btn-light", "btn-warning")
+            document.getElementById("botao").innerHTML = "Aprovado"
         }
-        else if () {
-
+        if (media < 7) {
+            document.getElementById("botao").classList.replace("btn-light", "btn-danger")
+            document.getElementById("botao").innerHTML = "Reprovado"
+        }
+        if (media == 10) {
+            document.getElementById("botao").classList.replace("btn-light", "btn-success")
+            document.getElementById("botao").innerHTML = "Aprovado com Distinção"
         }
     }
 
