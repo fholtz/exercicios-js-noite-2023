@@ -1,0 +1,89 @@
+<script>
+    let baseGerente = 0;
+    let minimoMerito = 20000;
+
+    let baseUnidade = [
+        132091.35,
+        107262.59,
+        24422.35,
+        28889.29,
+        148347.45,
+        64635.84,
+        30421.26,
+        15000,
+        22585.53
+    ];
+    let caixaAtual = [
+        139204.36,
+        99152.61,
+        27806.93,
+        35363.27,
+        173191.01,
+        61822.37,
+        28306.43,
+        46928.11,
+        18644.67
+    ];
+    let pastasUnidades = [
+        87,
+        24,
+        47,
+        20,
+        35,
+        15,
+        42,
+        29,
+        29
+    ];
+
+    let somaBaseAtual = 0;
+    let somaBaseAnterior = 0;
+    let merito = 0;
+    let valorMerito = 800;
+    let meritoGanho = 0;
+
+    for (let index = 0; index < pastasUnidades.length; index++) {
+        somaBaseAnterior = somaBaseAnterior + baseUnidade[index];
+        if (pastasUnidades[index] >= 20) {
+            somaBaseAtual = somaBaseAtual + caixaAtual[index];
+        }
+        if (pastasUnidades[index] < 20) {
+            if (caixaAtual[index] > baseUnidade[index]) {
+                somaBaseAtual = somaBaseAtual + baseUnidade[index];
+            }
+            if (caixaAtual[index] < baseUnidade[index]) {
+                somaBaseAtual = somaBaseAtual + caixaAtual[index];
+
+            }
+        }
+    }
+
+    console.log(somaBaseAnterior);
+    console.log(somaBaseAtual);
+
+    merito = somaBaseAtual - somaBaseAnterior + baseGerente;
+
+    console.log(merito);
+
+    if (merito >= minimoMerito) {
+        meritoGanho = (merito / minimoMerito) * valorMerito;
+
+        console.log(meritoGanho);
+    }
+
+    else {
+        console.log("TENTE OUTRA VEZ!!");
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

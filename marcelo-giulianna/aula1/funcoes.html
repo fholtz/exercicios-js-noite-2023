@@ -1,0 +1,60 @@
+<script>
+
+    // 01- Escreva uma função que realize uma 
+    // soma e mostre o resultado no console.log.
+
+    // var x = 1;
+    // var y = 3;
+
+    // function soma(x, y) {
+    //     let instrucoes = x + y;
+
+    //     return instrucoes;
+
+
+    // }
+
+    // let resultado = soma(x, y);
+
+    // console.log("A soma é ", resultado);
+
+    // 02- Escreva uma função calculadora que na sua chamada 
+    // receba uma das operações básicas e dois valores para
+    //  o cálculo, apresente no console.log a operação
+    //   escolhida e o resultado.
+
+    let num1 = 5;
+    let num2 = 10;
+    let operacao = 'porcentagem';
+    let result = 0;
+
+    function calculadora(num1, num2, operacao) {
+        switch (operacao) {
+            case "somar":
+                result = num1 + num2;
+                break;
+            case "subtracao":
+                result = num1 - num2;
+                break;
+            case "multiplicacao":
+                result = num1 * num2;
+                break;
+            case "divisao":
+                result = num1 / num2;
+                break;
+            default:
+                result = "operação errada";
+                break;
+        }
+
+        return result;
+    }
+
+    result = calculadora(num1, num2, operacao);
+
+    console.log(operacao, ":", result);
+
+
+
+
+</script>
