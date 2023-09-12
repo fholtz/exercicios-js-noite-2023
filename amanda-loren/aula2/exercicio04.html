@@ -8,19 +8,19 @@
     let altura = 1.60;
     imc = peso / (altura*altura)
 
-    if (imc >= 16.9) {
+    if (imc <= 17) {
         console.log("Muito abaixo do peso ", imc);
-    } if (imc >= 17 && imc <= 18.40) {
+    } if (imc >= 17 && imc <= 18.50) {
         console.log("Abaixo do peso ", imc);
-    } if (imc >= 18.50 && imc <= 24.90) {
+    } if (imc >= 18.50 && imc <= 25) {
         console.log("Peso normal ", imc);
-    } if (imc >= 25 && imc <= 29.90) {
+    } if (imc >= 25 && imc <= 30) {
         console.log("Acima do peso ", imc);
-    } if (imc >= 30 && imc <= 34.90) {
+    } if (imc >= 30 && imc <= 35) {
         console.log("Obesidade grau I ", imc);
     } if (imc >= 35 && imc <= 40) {
         console.log("Obesidade grau II ", imc);
-    } if (imc <= 40) {
+    } if (imc >= 40) {
         console.log("Obesidade grau III ", imc);
     }
 </script>
