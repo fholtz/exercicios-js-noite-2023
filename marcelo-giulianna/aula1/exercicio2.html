@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="mb-3 mt-3 col-6 ">
+        <input id="altura" type="number" class="form-control" placeholder="Altura">
+        <input id="peso" type="number" class="form-control mt-3" placeholder="Peso">
+        <button class="btn btn-outline-primary mt-3" type="button" id="calcular" onclick="calcular()">Calcular</button>
+    </div>
+    <h1 id="texto"></h1>
+</body>
+
+<script>
+    function calcular() {
+        let peso = parseFloat(document.getElementById('peso').value);
+        let altura = parseFloat(document.getElementById('altura').value);
+        let resultado = peso / (altura * altura);
+        let texto = '';
+
+        if (resultado < 18.5) {
+            texto = 'abaixo do peso normal'
+        }
+        else if (resultado >= 18.5 && resultado < 25) {
+            texto = 'peso normal'
+        }
+        else if (resultado >= 25 && resultado < 30) {
+            texto = 'excesso de peso'
+        }
+        else if (resultado >= 30 && resultado < 35) {
+            texto = 'obesidade classe I'
+        }
+        else if (resultado >= 35 && resultado < 40) {
+            texto = 'obesidade classe II'
+        }
+        else if (resultado >= 40) {
+            texto = 'obesidade classe III'
+        }
+
+        document.getElementById('texto').innerHTML = texto
+
+    }
+
+</script>
+
+</html>
