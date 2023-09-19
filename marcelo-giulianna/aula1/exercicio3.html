@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="input-group mb-3 mt-3">
+        <input id='temperatura' type="number" class="form-control" placeholder="Temperatura" aria-label="Username"
+            aria-describedby="basic-addon1">
+    </div>
+
+    <div class="form-check">
+        <input id='celsius' class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+        <label class="form-check-label" for="flexRadioDefault1">
+            Celsius
+        </label>
+    </div>
+    <div class="form-check">
+        <input id='fh' class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+        <label class="form-check-label" for="flexRadioDefault2">
+            Fahrenheit
+        </label>
+    </div>
+    <button id='converter' class="btn btn btn-outline-primary mt-3" onclick="calcular()">Converter</button>
+    <h1 id="texto"></h1>
+
+</body>
+
+<script>
+    function calcular() {
+        let temperatura = parseFloat(document.getElementById('temperatura').value);
+        let celsius = document.getElementById('celsius');
+        let fh = document.getElementById('fh');
+        let resultado = 0;
+        let texto = '';
+
+        if (celsius.checked) {
+            resultado = (temperatura * 9 / 5) + 32
+            texto = 'A temperatura em graus Celsius é ' + resultado;
+        }
+
+        else {
+            resultado = (temperatura - 32) * 5 / 9
+            texto = 'A temperatura em graus Fahrenheit é ' + resultado;
+        }
+
+        document.getElementById('texto').innerHTML = texto
+
+    }
+
+</script>
+
+</html>
