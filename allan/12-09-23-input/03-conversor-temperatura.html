@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor</title>
+</head>
+
+<body>
+    <h1>Conversor de Temperatura</h1>
+
+    <label for="valorInput">Valor da Temperatura:</label>
+    <input type="number" name="temperatura" id="valorInput" placeholder="Digite o valor"><br><br>
+
+    <label for="celsiusRadio">Celsius</label>
+    <input type="radio" name="temperatura" id="celsiusRadio" value="celsius">
+
+    <label for="fahrenheitRadio">Fahrenheit</label>
+    <input type="radio" name="temperatura" id="fahrenheitRadio" value="fahrenheit"><br><br>
+
+    <button onclick="converterTemperatura()">Converter</button><br>
+
+    <div id="resultadoConversao"></div>
+
+    <script>
+        function converterTemperatura() {
+            const valorInput = document.getElementById("valorInput");
+            const celsiusRadio = document.getElementById("celsiusRadio");
+            const resultadoConversao = document.getElementById("resultadoConversao");
+
+            const valor = parseFloat(valorInput.value);
+
+            if (celsiusRadio.checked) {
+                const fahrenheit = (valor * 9 / 5) + 32;
+                resultadoConversao.innerHTML = "A temperatura em graus Fahrenheit é: " + fahrenheit + " °F.";
+
+            } else {
+                const celsius = (valor - 32) * 5 / 9;
+                resultadoConversao.innerHTML = "A temperatura em graus Celsius é: " + celsius + " °C.";
+            }
+        }
+    </script>
+</body>
+
+</html>
