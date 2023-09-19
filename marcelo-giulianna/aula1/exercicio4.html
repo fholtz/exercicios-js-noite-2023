@@ -28,7 +28,7 @@
         array.push(input);
         array.sort(ordenar);
         document.getElementById("texto").innerHTML = array;
-
+       
     }
 
     function ordenar(a, b) {
@@ -38,7 +38,7 @@
     function somar(array) {
         let soma = 0;
         for (let i = 0; i < array.length; i++) {
-            soma += numeros[i];
+            soma += array[i];
 
         }
     }
