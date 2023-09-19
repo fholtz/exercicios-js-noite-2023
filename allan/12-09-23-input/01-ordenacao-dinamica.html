@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordenação Dinâmica</title>
+</head>
+
+<body>
+    <h1>Ordenação Dinâmica de Números</h1>
+    <input type="number" id="numeroInput" placeholder="Digite um número">
+    <button onclick="adicionarNumero()">Adicionar</button>
+    <div id="numerosOrdenados"></div>
+
+    <script>
+        let numeros = [];
+
+        function adicionarNumero() {
+            const numeroInput = document.getElementById("numeroInput");
+            const numerosOrdenadosDiv = document.getElementById("numerosOrdenados");
+            const novoNumero = parseInt(numeroInput.value);
+
+            numeros.push(novoNumero);
+            numeros.sort((a, b) => a - b);
+            numeroInput.value = "";
+
+            numerosOrdenadosDiv.innerHTML = "Números: " + numeros.join(", ");
+        }
+    </script>
+</body>
+
+</html>

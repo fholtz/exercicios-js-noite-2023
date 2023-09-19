@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+</head>
+
+<body>
+    <h1>Transformar string em Array</h1>
+
+    <label for="numeroStringInput">Adicione números separados por vírgula:</label>
+    <input type="text" id="numeroStringInput" placeholder="Digite os números, com vírgula">
+
+    <button onclick="processarString()">Processar</button><br><br>
+
+    <div id="arrayResultado"></div><br>
+
+    <div id="somaValores"></div><br>
+
+    <script>
+        function processarString() {
+            const numeroStringInput = document.getElementById("numeroStringInput");
+            const arrayResultado = document.getElementById("arrayResultado");
+            const somaValores = document.getElementById("somaValores");
+            const numerosStr = numeroStringInput.value;
+            const numerosArray = numerosStr.split(",");
+
+            arrayResultado.innerHTML = "Array: [" + numerosArray.join(", ") + "]";
+
+            const soma = numerosArray.reduce((acc, num) => acc + parseFloat(num), 0);
+
+            somaValores.innerHTML = "Soma dos valores: " + soma;
+        }
+    </script>
+</body>
+
+</html>
