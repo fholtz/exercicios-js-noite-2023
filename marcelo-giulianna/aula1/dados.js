@@ -6,8 +6,8 @@ const botao = document.querySelector('#buscar');
 
 //evento criado para realizar o envio da requisição
 // o (e) é a captura do evento
-botao.addEventListener('click', function (e) {
-    //cep.addEventListener('blur',function(e) { 
+// botao.addEventListener('click', function (e) {
+cep.addEventListener('blur', function (e) {
 
     //replace funão para substituir um caracter
     let search = cep.value.replace('-', '');
@@ -46,4 +46,6 @@ botao.addEventListener('click', function (e) {
         })
 
     // console.log(search);
+
+
 })
