@@ -4,10 +4,22 @@ const cep = document.querySelector('#cep');
 //Pegamos o elemento do input button buscar
 const botao = document.querySelector('#buscar');
 
+const showData = function (result) {
+    //o for in para tratarmos o objeto, o for in pega o resultado (result) e insere na variavel campo
+    for (const campo in result) {
+        //nesse if verifico dinamicamente se todos os campos da api e utilizo nos imputs
+        if (document.querySelector('#' + campo)) {
+            //pegamos dinamicamente o elemento dos imputs e passamos o value dinamicamente, dizendo que o result é um array e passando a variável campo como posição
+            document.querySelector('#' + campo).value = result[campo]
+            console.log(campo);
+        }
+    }
+}
+
 //evento criado para realizar o envio da requisição
 // o (e) é a captura do evento
-// botao.addEventListener('click', function (e) {
-cep.addEventListener('blur', function (e) {
+botao.addEventListener('click', function (e) {
+    // cep.addEventListener('blur', function (e) {
 
     //replace funão para substituir um caracter
     let search = cep.value.replace('-', '');
@@ -35,11 +47,11 @@ cep.addEventListener('blur', function (e) {
                 // o json tambem retorna uma promessa, então precisamos verificar se deu certo 
                 // se der certo nesse caso retorne os dados para nós
                 .then(function (data) {
+                    showData(data)
                     console.log(data);
-                    meu_callback(data);
+
                 })
         })
-
 
         // se der errado faz outra coisa
         .catch(function (e) {
@@ -47,28 +59,4 @@ cep.addEventListener('blur', function (e) {
         })
 
     // console.log(search);
-
-    function limpa_formulário_cep() {
-        //Limpa valores do formulário de cep.
-        document.getElementById('logradouro').value = ("");
-        document.getElementById('bairro').value = ("");
-        document.getElementById('cidade').value = ("");
-        document.getElementById('uf').value = ("");
-    }
-
-    function meu_callback(conteudo) {
-        if ((conteudo.erro == true)) {
-            //CEP não Encontrado.
-            limpa_formulário_cep();
-            alert("CEP não encontrado.");
-        } //end if.
-
-        else {
-            //Atualiza os campos com os valores.
-            document.getElementById('logradouro').value = (conteudo.logradouro);
-            document.getElementById('bairro').value = (conteudo.bairro);
-            document.getElementById('cidade').value = (conteudo.localidade);
-            document.getElementById('uf').value = (conteudo.uf);
-        }
-    }
 })
